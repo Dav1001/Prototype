@@ -52,17 +52,42 @@
 
 
 
-function User(name, age){
-	this.name = name;
-	this.age = age;
-	this.foo = function (){console.log('FOO');}
-}
-// User.prototype.foo = 5;
-User.prototype.x = 5;
+// function User(name, age){
+// 	this.name = name;
+// 	this.age = age;
+// 	this.foo = function (){console.log('FOO');}
+// }
+// // User.prototype.foo = 5;
+// User.prototype.x = 5;
 
-user1 = new User('Davit', 19);
+// user1 = new User('Davit', 19);
 
-for (var item in user1) {
-	if(user1.hasOwnProperty(item))
-		console.log(item);
+// for (var item in user1) {
+// 	if(user1.hasOwnProperty(item))
+// 		console.log(item);
+// }
+
+// function User(name, age){
+// 	this.name = name;
+// 	this.age = age;
+	
+// }
+
+// User.prototype.foo =function(){
+// 	return new User(this.name, this.age);
+// }
+// var user1 = new User('Davit', 19);
+
+
+var Book = function(title, pubYear, price){
+	this.title = title;
+	this.pubYear = pubYear;
+	this.price = price;
 }
+
+var book1 = new Book('Great Gatsby', 1925, '4.29$')
+Book.prototype.show = function(title, price){
+	console.log(this.title + ' ' + this.price)
+}
+
+book1.show();
